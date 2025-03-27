@@ -1,22 +1,12 @@
-// import { Card } from "../../ui/dashboard/cards";
 import RevenueChart from "../../ui/dashboard/revenue-chart";
 import LatestInvoices from "../../ui/dashboard/latest-invoices";
 import { lusitana } from "../../ui/fonts";
-// import { fetchCardData } from "../../lib/data";
 import { Suspense } from "react";
 import { RevenueChartSkeleton, LatestInvoicesSkeleton, CardsSkeleton } from "@/app/ui/skeletons";
 import CardWrapper from '@/app/ui/dashboard/cards'
 
 
 const Page = async () => {
-  // const revenue = await fetchRevenue()
-  // const latestInvoices = await fetchLatestInvoices();
-  // const {
-  //   totalPaidInvoices,
-  //   totalPendingInvoices,
-  //   numberOfInvoices,
-  //   numberOfCustomers,
-  // } = await fetchCardData();
   return (
     <main>
       <h1 className={`${lusitana.className} mb-4 text-xl md:text-2xl`}>
@@ -34,7 +24,6 @@ const Page = async () => {
         <Suspense fallback={<LatestInvoicesSkeleton />}>
           <LatestInvoices />
         </Suspense>
-        {/* <LatestInvoices latestInvoices={latestInvoices} /> */}
       </div>
     </main>
   );
